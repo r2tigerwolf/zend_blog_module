@@ -1,0 +1,8 @@
+<?php
+    $blogArr = array();
+    for($i = 0; $i < count($rowset); $i++) {
+      $blogArr[] =  array('id' => $rowset[$i]['id'] ,'title' => $rowset[$i]['title'] ,'body' => $rowset[$i]['body'] ,'date' => $rowset[$i]['date']);
+    }
+    $blogJson = json_encode($blogArr);
+    echo($blogJson);
+?>
